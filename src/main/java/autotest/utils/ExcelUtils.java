@@ -4,6 +4,8 @@ import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.json.JSONObject;
 
 import java.io.FileInputStream;
@@ -39,6 +41,9 @@ public class ExcelUtils {
         HSSFRow valueRow = sheet.getRow(tRow);
         for (int i = 0; i < titleRow.getPhysicalNumberOfCells(); i++) {
             String titleCell = titleRow.getCell(i).getStringCellValue();
+            if (valueRow.getCell(i) != null) {
+                valueRow.getCell(i).setCellType(CellType.STRING);
+            }
             String valueCell = valueRow.getCell(i).getStringCellValue();
             rowMap.put(titleCell, valueCell);
         }
