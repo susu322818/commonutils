@@ -254,7 +254,7 @@ public class EnumMapUtils {
         hashMap.put("5000147", "已换票");
         hashMap.put("5000148", "已红冲");
 
-        //回退状态
+        // 发票回退状态
         hashMap.put("5000247", "回退中");
         hashMap.put("5000248", "未回退");
         hashMap.put("5000249", "已处理");
