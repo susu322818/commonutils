@@ -258,5 +258,16 @@ public class EnumMapUtils {
         hashMap.put("5000247", "回退中");
         hashMap.put("5000248", "未回退");
         hashMap.put("5000249", "已处理");
+
+        //结算单状态
+        hashMap.put("5000093", "回退中");
+        hashMap.put("5000095", "未回退");
+        hashMap.put("5000096", "已处理");
+        hashMap.put("5000097", "回退中");
+        hashMap.put("5000098", "未回退");
+        hashMap.put("5000099", "已处理");
+        hashMap.put("5000100", "已处理");
+        hashMap.put("5000545", "已处理");
+        hashMap.put("5000547", "已处理");
     }
 }
