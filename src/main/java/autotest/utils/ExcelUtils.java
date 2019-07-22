@@ -29,16 +29,16 @@ public class ExcelUtils {
      * Get Excel row value by row num
      *
      * @param path
-     * @param tRow
+     * @param vRow
      * @return
      * @throws Exception
      */
-    public HashMap<String, String> getRowValue(String path, int tRow) throws Exception {
+    public HashMap<String, String> getRowValue(String path, int tRow, int vRow) throws Exception {
         HashMap rowMap = new HashMap();
         HSSFWorkbook hssfWorkbook = new HSSFWorkbook(new FileInputStream(path));
         HSSFSheet sheet = hssfWorkbook.getSheetAt(0);
-        HSSFRow titleRow = sheet.getRow(2);
-        HSSFRow valueRow = sheet.getRow(tRow);
+        HSSFRow titleRow = sheet.getRow(tRow);
+        HSSFRow valueRow = sheet.getRow(vRow);
         for (int i = 0; i < titleRow.getPhysicalNumberOfCells(); i++) {
             String titleCell = titleRow.getCell(i).getStringCellValue();
             if (valueRow.getCell(i) != null) {

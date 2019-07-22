@@ -260,14 +260,14 @@ public class EnumMapUtils {
         hashMap.put("5000249", "已处理");
 
         //结算单状态
-        hashMap.put("5000093", "回退中");
-        hashMap.put("5000095", "未回退");
-        hashMap.put("5000096", "已处理");
-        hashMap.put("5000097", "回退中");
-        hashMap.put("5000098", "未回退");
-        hashMap.put("5000099", "已处理");
-        hashMap.put("5000100", "已处理");
-        hashMap.put("5000545", "已处理");
-        hashMap.put("5000547", "已处理");
+        hashMap.put("5000093", "草稿");
+        hashMap.put("5000095", "合作方已确认");
+        hashMap.put("5000096", "联通已确认");
+        hashMap.put("5000097", "合作方退回");
+        hashMap.put("5000098", "联通退回");
+        hashMap.put("5000099", "双方已确认");
+        hashMap.put("5000100", "回退");
+        hashMap.put("5000545", "作废");
+        hashMap.put("5000547", "回退检查");
     }
 }
