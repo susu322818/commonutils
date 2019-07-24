@@ -269,5 +269,18 @@ public class EnumMapUtils {
         hashMap.put("5000100", "回退");
         hashMap.put("5000545", "作废");
         hashMap.put("5000547", "回退检查");
+
+        //接收事务处理类型（接收/退货）
+        hashMap.put("5000076", "接收");
+        hashMap.put("5000077", "退货");
+
+        //市场类型
+        hashMap.put("PROFESSION_MARKET", "专业市场");
+        hashMap.put("OVERT_MARKET", "公开市场");
+        hashMap.put("ELECTRONIC_MARKET", "电子超市");
+
+        //发起方
+        hashMap.put("1", "联通");
+        hashMap.put("2", "供应商");
     }
 }
