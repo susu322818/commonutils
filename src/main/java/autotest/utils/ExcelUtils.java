@@ -95,7 +95,8 @@ public class ExcelUtils {
         while (iter.hasNext()) {
             Map.Entry entry = (Map.Entry) iter.next();
             Object enumKey = entry.getKey();
-            recordObj.put(String.valueOf(enumKey), exMap.get(enumKey));
+            String newValue = (String) EnumMapUtils.hashMap.get(recordObj.get(String.valueOf(enumKey)));
+            recordObj.put(String.valueOf(enumKey), newValue);
         }
 
         return recordObj.toString();
@@ -119,6 +120,22 @@ public class ExcelUtils {
                     BigDecimal bd = new BigDecimal(recordObj.get(str).toString());
                     String newStr = df.format(bd);
                     recordObj.put(str, newStr);
+                }
+                break;
+            case 2:
+                for (String str : strList) {
+                    String dateStr = recordObj.get(str).toString().split(" ")[0];
+                    recordObj.put(str, dateStr);
+                }
+                break;
+            case 3:
+                for (String str : strList) {
+                    if (recordObj.get(str).equals("true")) {
+                        recordObj.put(str, "是");
+                    }
+                    if (recordObj.get(str).equals("false")) {
+                        recordObj.put(str, "否");
+                    }
                 }
                 break;
         }

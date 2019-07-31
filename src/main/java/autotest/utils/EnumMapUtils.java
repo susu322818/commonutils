@@ -10,7 +10,7 @@ import java.util.HashMap;
  */
 public class EnumMapUtils {
 
-    public final static HashMap hashMap = new HashMap();
+    public static HashMap hashMap = new HashMap();
     static {
         // 结算模式
         hashMap.put("5000086", "集团一点结算");
@@ -282,5 +282,12 @@ public class EnumMapUtils {
         //发起方
         hashMap.put("1", "联通");
         hashMap.put("2", "供应商");
+
+        //订单状态
+        hashMap.put("P1", "不在结算系统结算");
+        hashMap.put("P2", "同步中");
+        hashMap.put("P3", "同步完成");
+        hashMap.put("P4", "同步失败");
+        hashMap.put("P5", "待同步");
     }
 }
