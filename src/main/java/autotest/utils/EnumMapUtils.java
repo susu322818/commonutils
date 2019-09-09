@@ -13,6 +13,7 @@ public class EnumMapUtils {
     public static HashMap hashMap = new HashMap();
     static {
         // 结算模式
+        hashMap.put("0","");
         hashMap.put("5000086", "集团一点结算");
         hashMap.put("5000087", "省分一点结算");
         hashMap.put("5000088", "集团代付");
@@ -289,5 +290,6 @@ public class EnumMapUtils {
         hashMap.put("P3", "同步完成");
         hashMap.put("P4", "同步失败");
         hashMap.put("P5", "待同步");
+
     }
 }
