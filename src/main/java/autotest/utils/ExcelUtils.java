@@ -95,7 +95,7 @@ public class ExcelUtils {
         while (iter.hasNext()) {
             Map.Entry entry = (Map.Entry) iter.next();
             Object enumKey = entry.getKey();
-            String newValue = (String) EnumMapUtils.hashMap.get(recordObj.get(String.valueOf(enumKey)));
+            String newValue = (String) EnumMapUtils.hashMap.get((recordObj.get(String.valueOf(enumKey))).toString());
             recordObj.put(String.valueOf(enumKey), newValue);
         }
 
